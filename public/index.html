@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agienomoto.ph — Filipino Food Chatbot</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Floating food background -->
+  <div class="food-bg" id="foodBg"></div>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo-area">
+      <div class="logo-icon">🍜</div>
+      <div>
+        <div class="logo-text">Agienomoto.ph</div>
+        <div class="logo-sub">Filipino Food Chatbot</div>
+      </div>
+    </div>
+    <div class="status-pill">
+      <div class="status-dot"></div>
+      Luto na!
+    </div>
+  </header>
+
+  <!-- SUGGESTED CHIPS -->
+  <div class="suggestions">
+    <div class="suggestion-chip" onclick="sendSuggestion(this)">🍖 Adobo recipe?</div>
+    <div class="suggestion-chip" onclick="sendSuggestion(this)">🍚 What is sinigang?</div>
+    <div class="suggestion-chip" onclick="sendSuggestion(this)">🥘 Best Filipino dishes?</div>
+    <div class="suggestion-chip" onclick="sendSuggestion(this)">🍌 Halo-halo history</div>
+    <div class="suggestion-chip" onclick="sendSuggestion(this)">🍗 How to cook lechon?</div>
+    <div class="suggestion-chip" onclick="sendSuggestion(this)">🦐 Kare-kare ingredients</div>
+    <div class="suggestion-chip" onclick="sendSuggestion(this)">🥭 Best kakanin?</div>
+  </div>
+
+  <div class="help-card" id="helpCard">
+    <div class="help-title">Try these food questions</div>
+    <div class="help-tags">
+      <span class="help-tag" onclick="sendSuggestion(this)">🍲 Paano magluto ng sinigang?</span>
+      <span class="help-tag" onclick="sendSuggestion(this)">🍜 Ano ang pares?</span>
+      <span class="help-tag" onclick="sendSuggestion(this)">🍩 Ano ang best dessert sa Pinas?</span>
+      <span class="help-tag" onclick="sendSuggestion(this)">🏖️ Saan masarap kumain sa Cebu?</span>
+    </div>
+  </div>
+
+  <!-- CHAT AREA -->
+  <div class="chat-area" id="chatArea">
+    <div class="welcome-card">
+      <div class="welcome-emoji">🍜</div>
+      <div class="welcome-title">Kumusta! I'm Agienomoto!</div>
+      <div class="welcome-desc">
+        Your funny, witty, and <em>sobrang sarap</em> guide to everything Filipino food!
+        Ask me about recipes, food history, or where to eat.
+        <strong>Kain na tayo!</strong> 🇵🇭
+      </div>
+      <div class="food-tags">
+        <span class="food-tag">🍖 Adobo</span>
+        <span class="food-tag">🥘 Sinigang</span>
+        <span class="food-tag">🍗 Lechon</span>
+        <span class="food-tag">🍌 Halo-halo</span>
+        <span class="food-tag">🥜 Kare-kare</span>
+        <span class="food-tag">🍚 Sinangag</span>
+        <span class="food-tag">🦐 Sisig</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- INPUT AREA -->
+  <div class="input-area">
+    <div class="input-wrap">
+      <textarea id="userInput" rows="1" placeholder="Tanong mo sa akin... Ask me anything about Filipino food! 🍜"></textarea>
+    </div>
+    <button class="send-btn" id="sendBtn" onclick="sendMessage()">
+      <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+    </button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
